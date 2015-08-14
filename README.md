@@ -40,6 +40,22 @@ Obter o itinerário de uma unidade de transporte
 Buscar por paradas de ônibus
 Buscar por pontos fixos de táxi
 
+Localização dos pontos fixos de táxi
+Localização dos pontos de ônibus
+Linhas de ônibus e lotação: 
+Tipo:
+L - lotação
+O - ônibus
+
+Codigo:
+sufixo 1 - ida
+sufixo 2 - volta
+
+Relacionamento entre paradas e linhas de ônibus
+Coordenadas geográficas das linhas de ônibus e lotação
+
+
+
 
 
 

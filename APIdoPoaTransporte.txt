@@ -1,0 +1,190 @@
+API do PoaTransporte
+
+URL: http://www.poatransporte.com.br/php/facades/process.php
+
+Façade
+Todos os serviços são solicitados a um único façade, localizado no endereço http://www.poatransporte.com.br/php/facades/process.php
+
+Solicitações a este serviço devem ser efetuadas usando uma requisição GET, com os seguintes parâmetros:
+
+a (obrigatório) - Identificador da operação. Possíveis valores:
+
+• nc – nome e código
+
+• il - itinerários (rotas)
+
+• tp - pontos de ônibus
+
+• tx - pontos de taxi
+
+p (obrigatório) ID relacionado a operação descrita em a. Pode ser o ID da unidade de transporte ou um range latitude x longitude para extração dos pontos de taxi/ônibus
+
+t - Tipo da requisição. Obrigatório apenas se a=nc. Possíveis valores:
+
+• o - Ônibus
+
+• l - Lotação
+
+Operações
+Todas as operações acessadas pelo façade retornam um objeto JSON. As seguintes operações são permitidas:
+
+Listar as linhas de ônibus
+
+Listar as linhas de lotação
+
+Obter o itinerário de uma unidade de transporte
+
+Buscar por paradas de ônibus
+
+Buscar por pontos de táxi
+
+Listar as linhas de ônibus
+
+É possível extrair todas as linhas de ônibus da cidade através do seguinte link:
+
+http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=o
+
+Exemplo de retorno
+
+[{
+    "id":"113619",
+    "codigo":"376-1",
+    "nome":"HERDEIROS\/ESMERALDA "
+},{
+    "id":"113620",
+    "codigo":"376-2",
+    "nome":"HERDEIROS\/ESMERALDA "
+},{
+    "id":"113621",
+    "codigo":"110-1","nome":"RESTINGA NOVA VIA TRISTEZA "
+},
+...
+]
+Listar as linhas de lotação
+
+É possível extrair todas as linhas de lotação da cidade através do seguinte link:
+
+http://www.poatransporte.com.br/php/facades/process.php?a=nc&p=%&t=l
+
+Exemplo de retorno
+
+[{
+    "id":"114633",
+    "codigo":"60.21-2",
+    "nome":"HOSPITAL CONCEICAO-IGUATEMI"
+},{
+    "id":"114632",
+    "codigo":"60.21-1",
+    "nome":"HOSPITAL CONCEICAO-IGUATEMI"
+},{
+    "id":"114631",
+    "codigo":"60.2-2",
+    "nome":"HOSPITAL CONCEICAO-VILA IPIRANGA"
+},
+...
+]
+Obter o itinerário de uma determinada unidade de transporte (UT)
+
+De mãos do ID da unidade de transporte, acesse o seguinte link:
+
+http://www.poatransporte.com.br/php/facades/process.php?a=il&p=[ID-da-UT]
+
+Informando o ID da UT, por exemplo:
+
+http://www.poatransporte.com.br/php/facades/process.php?a=il&p=1141111
+
+Retorno
+
+O retorno será um conjunto de dados, contendo os dados básicos (nome, id, código) e a listagem de pontos (latitude x longitude) do itinerário da UT.
+
+{
+    "idlinha":"114111",
+    "nome":"TRANSVERSAL 1 ",
+    "codigo":"T1-1",
+    "0":{
+        "lat":"-30.00868521100000000",
+        "lng":"-51.14298116400000000"
+},
+    "1":{
+        "lat":"-30.00897921100000000",
+        "lng":"-51.14341616400000000"
+    },
+...
+"258":{
+    "lat":"-30.03722421100000000",
+    "lng":"-51.23724716400000000"
+    }
+}
+Listar as paradas de ônibus
+
+Como foi pensado para ser utilizado em conjunto com a API do Google Maps, as requisições ao façade devem levar em consideração um conjunto de pontos de latitude x longitude máximas e mínimas, delimintando uma região quadrangular na qual quer-se obter todos os pontos de ônibus dentro desta região.
+
+Não há nenhuma restrição para o tamanho da região, então utilizando uma região que abranja toda a cidade de Porto Alegre, todos os pontos deverão ser retornados, como no exemplo abaixo:
+
+http://www.poatransporte.com.br/php/facades/process.php?a=tp&p=((mxlat, mxlon), (mnlat, mnlon))
+
+http://www.poatransporte.com.br/php/facades/process.php?a=tp&p=((-30.14296222668432,%20-51.87917968750003),%20(-29.79200328961529,%20-50.56082031250003))))
+
+Retorno
+
+[{
+    "codigo":"2163",
+    "latitude":"-30.04067100000000000",
+    "longitude":"-51.20105300000000000",
+    "terminal":"N",
+    "linhas":[{
+        "idLinha":"114025",
+        "codigoLinha":"2802-1",
+        "nomeLinha":"OTTO\/HPS\/3\u00aa PERIMETRAL"
+        },{
+            "idLinha":"113994",
+            "codigoLinha":"D43-1",
+            "nomeLinha":"UNIVERSITARIA-DIRETA"
+            }
+        ]
+    },{
+    "codigo":"2263",
+    "latitude":"-30.04172000000000000",
+    "longitude":"-51.19158800000000000",
+    "terminal":"N",
+    "linhas":[{
+        "idLinha":"114324",
+        "codigoLinha":"441-2",
+        "nomeLinha":"ANTONIO DE CARVALHO"
+    },{
+        "idLinha":"113798",
+        "codigoLinha":"4941-2",
+        "nomeLinha":"BATISTA FLORES"
+    },{
+        "idLinha":"113799",
+        "codigoLinha":"4942-2",
+        "nomeLinha":"BATISTA FLORES \/ RUBEM BERTA"
+    },
+...
+    ]
+},
+...
+]
+Listar os pontos de táxi
+
+Segue o mesmo estilo da listagem das paradas de ônibus, mas retorna parâmetros diferentes
+
+http://www.poatransporte.com.br/php/facades/process.php?a=tx&p=((mxlat, mxlon),(mnlat, mnlon))
+
+http://www.poatransporte.com.br/php/facades/process.php? a=tx&p=((-30.14296222668432,%20-51.87917968750003),%20(-29.79200328961529,%20-50.56082031250003))))
+
+Retorno
+
+[{
+    "endereco":"R DR CECILIO MONZA",
+    "telefone":" ",
+    "latitude":"-30.04794290572600000",
+    "longitude":"-51.12794467539000000"
+},{
+    "endereco":"R DIOMARIO MOOJEM 30",
+    "telefone":" ",
+    "latitude":"-30.09264490572600000",
+    "longitude":"-51.23682367539000000"
+}, 
+...
+]
