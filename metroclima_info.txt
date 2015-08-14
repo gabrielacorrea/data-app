@@ -1,0 +1,31 @@
+PI das estações meteorológicas
+
+URL: https://metroclimaestacoes.procempa.com.br/metroclima/seam/resource/rest/externalRest/ultimaLeitura
+
+Nova API com as informações obtidas das 10 estações meteorológicas de Porto Alegre.
+
+A chamada a este serviço retorna os seguintes atributos:
+
+id
+estacao
+endereco
+bairro
+latitude
+longitude
+data
+temperaturaInterna
+umidadeInterna
+temperaturaExterna
+umidadeExterna
+chuvaDiaria
+pressao
+velocidadeVento
+direcaoVento
+velocidadeVentoRajada
+direcaoVentoRajada
+quadranteVento
+sensacaoTermica
+pontoOrvalho
+alturaNuvens
+idRessonare
+
