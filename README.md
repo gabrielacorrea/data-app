@@ -2,14 +2,14 @@
 
 ##GEO: http://www.datapoa.com.br/group/geo
 
-###Acidentes de Trânsito
+- Acidentes de Trânsito
 Acidentes de trânsito ocorridos nas ruas de Porto Alegre, agrupados por ano.
 Dicionário de dados dos acidentes
 
-###Faces de Quarteirão
+- Faces de Quarteirão
 Faces de quarteirão, recuos de jardim
 
-###Logradouros
+- Logradouros
 
 ###Quarteirões
 Quarteirões, conforme definido no Plano Diretor (PDDUA).
