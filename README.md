@@ -1,6 +1,14 @@
 # data-app
 
-GEO: http://www.datapoa.com.br/group/geo
+####[GEO](http://www.datapoa.com.br/group/geo):
+Dados referente às informações georreferenciadas da cidade.
+* Rede DMAE;
+* Rede DEP;
+* Áreas de Preservação;
+* Redes de Energia;
+* Redes de Gás;
+* Escolas Municipais.
+
 
 - Acidentes de Trânsito
 Acidentes de trânsito ocorridos nas ruas de Porto Alegre, agrupados por ano.
@@ -55,7 +63,28 @@ Relacionamento entre paradas e linhas de ônibus
 Coordenadas geográficas das linhas de ônibus e lotação
 
 
+####[Turismo](http://www.datapoa.com.br/group/turismo):
+Dados referentes ao turismo da cidade.
+* Chegadas e Partidas Aeroporto;
+* Chegadas e Partidas Rodoviária;
+* Bares, Restaurantes e Casas Noturnas;
+* Atendimento ao Turista;
+* Linha Turismo.
+
+- Boletim Estatístico Municipal do Turismo:
+Boletim Estatístico Municipal do Turismo - 1º Quadrimestre 2013 
 
 
+- Hotelaria:
+Dados sobre a hotelaria em Porto Alegre
 
+- Aeroporto:
+Dados do Aeroporto Internacional Salgado Filho
+ Passageiros em voos domésticos no Aeroporto Internacional Salgado Filho 
+ Passageiros em voos internacionais no Aeroporto Internacional Salgado Filho 
+ Quantidade mensal de voos realizados no Aeroporto Internacional Salgado Filho
+ Quantidade mensal de voos realizados no Aeroporto Internacional Salgado Filho
 
+- Rodoviária:
+Informações da Rodoviária de Porto Alegre
+ Quantidade de passageiros em embarques intermunicipais na rodoviária de Porto Alegre
