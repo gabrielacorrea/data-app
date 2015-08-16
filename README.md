@@ -37,6 +37,9 @@ Localização das lixeiras
 
 - Espaços Culturais: Informações relacionadas aos espaços culturais da Cidade
 
+- Pardais:
+Endereços dos pardais em Porto Alegre 
+
 - PoaTransporte:
 Dados do serviço PoaTransporte
 É possível efetuar as seguintes operações sobre os modais de transporte público de Porto Alegre:
