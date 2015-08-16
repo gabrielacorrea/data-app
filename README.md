@@ -1,4 +1,4 @@
-# data-app
+# Dados
 
 ####[GEO](http://www.datapoa.com.br/group/geo):
 Dados referente às informações georreferenciadas da cidade.
@@ -9,37 +9,35 @@ Dados referente às informações georreferenciadas da cidade.
 * Redes de Gás;
 * Escolas Municipais.
 
-
-- Acidentes de Trânsito
+- Acidentes de Trânsito: 
 Acidentes de trânsito ocorridos nas ruas de Porto Alegre, agrupados por ano.
 Dicionário de dados dos acidentes
 
-- Faces de Quarteirão
+- Faces de Quarteirão:
 Faces de quarteirão, recuos de jardim
 
 - Logradouros
 
-- Quarteirões
+- Quarteirões:
 Quarteirões, conforme definido no Plano Diretor (PDDUA).
 
-- Subunidades de Estruturação Urbana
+- Subunidades de Estruturação Urbana: 
 Subunidades de estruturação urbana, conforme definido no Plano Diretor (PDDUA).
 
-- Macrozonas
+- Macrozonas: 
 Macrozonas, conforme definido no Plano Diretor (PDDUA).
 
-- Unidades de Estruturação Urbana
+- Unidades de Estruturação Urbana: 
 Unidades de estruturação urbana, conforme definido no Plano Diretor (PDDUA).
 
-- Coleta de lixo
+- Coleta de lixo: 
 Informações referentes à coleta de lixo. Localização das lixeiras e contêineres.
 Localização dos contêineres da coleta automatizada de lixo orgânico
 Localização das lixeiras
 
-- Espaços Culturais
-Informações relacionadas aos espaços culturais da Cidade
+- Espaços Culturais: Informações relacionadas aos espaços culturais da Cidade
 
-- PoaTransporte
+- PoaTransporte:
 Dados do serviço PoaTransporte
 É possível efetuar as seguintes operações sobre os modais de transporte público de Porto Alegre:
 Listar as linhas de ônibus
