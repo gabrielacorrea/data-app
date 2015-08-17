@@ -63,6 +63,11 @@ sufixo 2 - volta
 Relacionamento entre paradas e linhas de ônibus
 Coordenadas geográficas das linhas de ônibus e lotação
 
+- [Acidentes de trânsito]: (http://dados.rs.gov.br/dataset/acidentestransito)
+Relação de Acidentes de Trânsito com Vítimas Fatais 
+
+- [Balada segura]: (http://dados.rs.gov.br/dataset/baladasegura)
+Abordagens realizadas na Operação Balada Segura
 
 ####[Turismo](http://www.datapoa.com.br/group/turismo):
 Dados referentes ao turismo da cidade.
